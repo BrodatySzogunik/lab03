@@ -1,4 +1,1 @@
-Title;article body;Jakub Mordalski;false;false
-Title;article body;Jakub Mordalski;false;false
-Jakub Mordalski;article body;Title;false;false
-Jakub Mordalski;article body;Title;false;false
+1;artykuł;elcitra;article;recenzja;true;true;true;true;true;false
