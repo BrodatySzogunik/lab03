@@ -1,1 +1,2 @@
-1;artykuł;elcitra;article;recenzja;true;true;true;true;true;false
+1;artykuł;sdafasdfasdfa;article;recenzja;false;false;true;false;true;false
+2;sdfasdf;sadfasdf;sadf;;false;false;true;false;false;false

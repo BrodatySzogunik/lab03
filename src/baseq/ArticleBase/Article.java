@@ -1,4 +1,4 @@
-package baseq;
+package baseq.ArticleBase;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

@@ -1,0 +1,23 @@
+Program uruchamiany z CMD za pomocą komendy java -jar lab03_pop
+
+Program udostępnia 3 userów
+Autora
+Edytora
+Recenzenta
+
+Autor:
+Dodaje artykuł
+Może edytować nowo dodany, lub opublikowany artykuł
+Wyświetla wszystkie artykuly
+Zgłasza artykół do dalszego przetwarzania
+
+Edytor:
+Wyświetla artykuły zgłoszone przez autorów
+Zgłoś artykul do dalszego przetwarzania
+Przegląda recenzje
+Publikuje artykuł
+
+Recenzent
+Dodaje recenzje
+Przegląda artykuły zgłoszone do recenji
+Zatwierdza recenzje

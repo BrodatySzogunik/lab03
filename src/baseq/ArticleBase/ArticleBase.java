@@ -1,16 +1,15 @@
-package baseq;
+package baseq.ArticleBase;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class ArticleBase {
+
         private static Map<Integer,Article> articleBase;
 
         public static void addArticle(Article article){
@@ -21,8 +20,6 @@ public class ArticleBase {
             return articleBase;
         }
 
-        public static void acceptArticleByEditor(){}
-        public static void acceptArticleByReviewer(){}
 
         public static Map<Integer,Article> getAvailableToEditArticles(){ // artykuły dostępne do edytowania dla autora
             Map<Integer,Article> result =  articleBase.entrySet().stream()

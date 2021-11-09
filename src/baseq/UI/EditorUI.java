@@ -1,8 +1,9 @@
-package baseq;
+package baseq.UI;
 
-import java.io.File;
+import baseq.ArticleBase.Article;
+import baseq.ArticleBase.ArticleBase;
+
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -35,7 +36,7 @@ public class EditorUI {
         }while(userChoice!=5);
     }
 
-    public void showEditorOptions(){
+    private void showEditorOptions(){
         System.out.println("---EDITOR-MENU---\n" +
                 "1-Wyświetl artykuły zgloszone przez autorów\n" +
                 "2-Zgłoś artykuł do dalszego przetwarzania\n" +
@@ -46,7 +47,7 @@ public class EditorUI {
     }
 
 
-    public void printMap(Map<Integer,Article> map){
+    private void printMap(Map<Integer, Article> map){
         System.out.println("\n=============================");
         for(Map.Entry<Integer,Article> entry:map.entrySet()){
             System.out.println(entry.getKey()+": "+ entry.getValue());
@@ -54,12 +55,12 @@ public class EditorUI {
         System.out.println("=============================\n");
     }
 
-    public void showReportedArticles(){
+    private void showReportedArticles(){
         ArticleBase.readFromFile();
         printMap(ArticleBase.getReportedArticles());
     }
 
-    public void sendArticleToReviewer(){
+    private void sendArticleToReviewer(){
         int userChoice;
         Scanner sysIn = new Scanner(System.in);
         showReportedArticles();
@@ -73,12 +74,12 @@ public class EditorUI {
         }
     }
 
-    public void showReviews(){
+    private void showReviews(){
         ArticleBase.readFromFile();
         printMap(ArticleBase.getReviews());
     }
 
-    public void publicArticle(){
+    private void publicArticle(){
 
         int userChoice;
         Scanner sysIn = new Scanner(System.in);

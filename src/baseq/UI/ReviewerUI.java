@@ -1,4 +1,7 @@
-package baseq;
+package baseq.UI;
+
+import baseq.ArticleBase.Article;
+import baseq.ArticleBase.ArticleBase;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
@@ -31,7 +34,7 @@ public class ReviewerUI {
     }
 
 
-    public void showReviewerOptions(){
+    private void showReviewerOptions(){
         System.out.println("---REVIEWER-MENU---\n" +
                 "1-Dodaj Receznję\n" +
                 "2-Preglądaj artykuły zgłoszone do recenzji\n" +
@@ -41,7 +44,7 @@ public class ReviewerUI {
     }
 
 
-    public void printMap(Map<Integer,Article> map){
+    private void printMap(Map<Integer, Article> map){
         System.out.println("\n=============================");
         for(Map.Entry<Integer,Article> entry:map.entrySet()){
             System.out.println(entry.getKey()+": "+ entry.getValue());
@@ -51,12 +54,12 @@ public class ReviewerUI {
 
 
 
-    public void showArticlesSentToReview(){
+    private void showArticlesSentToReview(){
         ArticleBase.readFromFile();
         printMap(ArticleBase.getArticlesSentToReviewer());
     }
 
-    public void acceptArticle(){
+    private void acceptArticle(){
         int userChoice;
         Scanner sysIn = new Scanner(System.in);
         showArticlesSentToReview();
@@ -69,7 +72,7 @@ public class ReviewerUI {
             System.out.println(e);
         }
     }
-    public void addReview(){
+    private void addReview(){
         String review;
         int userChoice;
         Scanner sysIn = new Scanner(System.in);

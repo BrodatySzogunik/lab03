@@ -1,4 +1,7 @@
-package baseq;
+package baseq.UI;
+
+import baseq.ArticleBase.Article;
+import baseq.ArticleBase.ArticleBase;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
@@ -16,6 +19,7 @@ public class AuthorUI {
     }
 
     public void showUI(){
+        ArticleBase.getArticleBase();
         Scanner sysIn = new Scanner(System.in);
         int userChoice;
         do {
@@ -31,7 +35,7 @@ public class AuthorUI {
         }while(userChoice!=5);
     }
 
-    public void showAuthorOptions(){
+    private void showAuthorOptions(){
         System.out.println("---AUTHOR-MENU---\n" +
                 "1-Dodaj artykuł\n" +
                 "2-Edytuj istniejące lub niezgłoszone artykuły\n" +
@@ -40,7 +44,7 @@ public class AuthorUI {
                 "5-Wyjdź");
     }
 
-    public void printMap(Map<Integer,Article> map){
+    private void printMap(Map<Integer, Article> map){
         System.out.println("\n=============================");
         for(Map.Entry<Integer,Article> entry:map.entrySet()){
             System.out.println(entry.getKey()+": "+ entry.getValue());
@@ -48,17 +52,17 @@ public class AuthorUI {
         System.out.println("=============================\n");
     }
 
-    public void showAcceptedArticles(){
+    private void showAcceptedArticles(){
         ArticleBase.readFromFile();
         printMap(ArticleBase.getAvailableToEditArticles());
     }
 
-    public void showUnReportedArticles(){
+    private void showUnReportedArticles(){
         ArticleBase.readFromFile();
         printMap(ArticleBase.getUnReportedArticles());
     }
 
-    public void sendArticleToEditor(){
+    private void sendArticleToEditor(){
 
         int userChoice;
         Scanner sysIn = new Scanner(System.in);
@@ -76,7 +80,7 @@ public class AuthorUI {
 
     }
 
-    public void addArticle(){
+    private void addArticle(){
         ArticleBase.readFromFile();
         String title;
         String authorName;
@@ -108,7 +112,7 @@ public class AuthorUI {
         }
     }
 
-    public void editExistingArticle(){
+    private void editExistingArticle(){
         showAcceptedArticles();
         int userChoice;
         String editedText;
@@ -130,7 +134,7 @@ public class AuthorUI {
 
     }
 
-    public void showArticles() {
+    private void showArticles() {
         ArticleBase.readFromFile();
         printMap(ArticleBase.getArticleBase());
     }
